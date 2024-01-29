@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body{
+    transition: margin-right .5s;
+}
+
+header{
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+.header-left img{
+    margin-left: 220px;
+}
+
+.header-left ul{
+    margin-left: 35px;
+    display: flex;
+    gap: 20px;
+}
+
+.header-left ul li{
+    color: white;
+    list-style: none;
+    font-size: 14px;
+}
+
+#down-arrow{
+    transform: rotate(180deg);
+    transition-duration: 0.3s;
+}
+
+#down-arrow:hover{
+    transform: rotate(0deg);
+    transition-duration: 0.3s;
+}
+
+/* RIGHT */
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+}
+
+.search-box{
+    height: 23px;
+    width: min-content;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ADFF45;
+    border: 1px solid #ADFF45;
+    margin-right: 100px;
+}
+
+.search-box input{
+    background-color: #ADFF45;
+    margin-right: 100px;
+    margin-left: 10px;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+::placeholder{
+    color: black;
+    font-weight: 600;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+.fa-solid{
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+.fa-bars{ 
+    font-size: 30px;
+    margin-right: 20px;
+    display: none;
+}
+
+.header-right button{
+    background-color: transparent;
+    height: min-content;
+    border: 1px solid transparent;
+    display: none;
+}
+
+main{
+    height: 10000px;
+    width: 100%;
+    background-color: rgb(28, 28, 16);
+    display: flex;
+}
+
+main img{
+    height: 250px;
+    margin: 30px;
+}
+
+main p{
+    margin-top: 30px;
+    margin-right: 30px;
+    color: white;
+}
+
+.sidebar-contents{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sidebar-contents button{
+    padding: 20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: white;
+}
+
+.sidebar-contents button:hover {
+    padding: 20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}
+
+#closeNav{
+    width: 40px;
+    padding: 10px;
+    border: 1px solid transparent;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 24px;
+    top: 0;
+}
+
+.fa-xmark{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #000000ae;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: none;
+  }
+
+#sidebar-search{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #ADFF45;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.sidebar-buttons{
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1118px){
+    .search-box{
+        height: 23px;
+        width: min-content;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: #ADFF45;
+        border: 1px solid #ADFF45;
+        margin-right: 100px;
+    }
+    
+    .header-left img{
+        margin-left: 30px;
+    }
+
+    #mySidebar{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 935px){
+    .search-box{
+        display: none;
+    }
+
+    .fa-bars{ 
+        display: block;
+    }
+
+    #mySidebar{
+        display: block;
+    }
+    #sidebar-search{
+        display: block;
+    }
+    
+    .header-right button{
+        display: block;
+        margin-right: 10px;
+    }
+
+    main{
+        height: 10000px;
+        width: 100%;
+        background-color: rgb(28, 28, 16);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main p{
+        margin-left: 30px;
+        margin-top: -20px;
+    }
+
+    main img{
+        object-fit: contain;
+    }
+
+    .header-left img{
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 507px){
+    li{
+        display: none;
+    }
+    .sidebar {
+        display: block;
+    }
+    .sidebar-buttons{
+        display: block;
+    }
+}
